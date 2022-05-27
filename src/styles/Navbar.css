@@ -1,0 +1,28 @@
+.header{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 7vh;
+}
+
+.header_title{
+  display: flex;
+  width: 30%;
+  font-family: 'Secular One', sans-serif;
+  font-size: 1.8rem;
+  font-weight: lighter;
+  padding-left: 10px;
+}
+
+.nav_container{
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+}
+
+.nav_container a{
+  margin: 0 10px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--primary-font-color);
+}
