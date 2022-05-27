@@ -1,10 +1,11 @@
-.signin{
+.signin_container{
   display: flex;
   height: 92vh;
 }
 
 .signin_banner{
   display: flex;
+  width: 50%;
   height: 100%;
   align-items: center;
   justify-content: space-around;
@@ -24,4 +25,74 @@
 
 .signin_banner img{
   width: 90%;
+}
+
+
+
+.signin{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.signin h2{
+  font-size: 2rem;
+}
+
+.signin_form{
+  display: flex;    
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: auto;
+  flex-direction: column;
+  border: 2px solid var(--tertiary-color);
+  border-radius: 5px;
+}
+
+.signin_form{
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.signin_input{
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  align-items: center;  
+}
+
+.signin_form span{
+  align-self: flex-start;
+  font-size: 1.2rem;
+}
+
+.signin_form input{
+  width: 100%;
+  height: 1.5rem;
+  border: 1px solid var(--tertiary-color);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.signin_submit{
+  justify-self: flex-end;
+  width: 80%;
+  height: 30px;
+  font-size: 1.2rem;
+  margin: 10px 0;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  color: var(--secondary-font-color);
+  cursor: pointer;
+}
+
+.invite{
+  font-size: .9rem;
+  font-style: italic;
+  color: var(--secondary-color);
 }
