@@ -2,9 +2,9 @@ import React from 'react'
 import { Navigate } from 'react-router-dom';
 
 export const PublicRouters = ({ children }) => {
-  const { state, dispatch } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
-  return state.logged
+  return user.logged
     ? <Navigate to="/" />
     : children
 }

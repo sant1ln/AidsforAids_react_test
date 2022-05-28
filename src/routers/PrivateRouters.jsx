@@ -3,9 +3,9 @@ import { Navigate } from 'react-router-dom';
 import { AuthContext } from '../store/AppContext'
 
 export const PrivateRouters = ({ children }) => {
-  const { state, dispatch } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
-  return state.logged
+  return user.logged
         ? children
         : <Navigate to="/signin" />
 }
