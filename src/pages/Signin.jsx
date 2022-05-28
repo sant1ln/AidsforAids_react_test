@@ -15,7 +15,7 @@ export const Signin = () => {
           <img src={bannerImage} alt="Banner image" />
       </section>
       <section className='signin'>
-        <h2>Sign in!</h2>
+        <h2>Sign in</h2>
       <form className='signin_form'>
 
         <label htmlFor="name" className='signin_input'>

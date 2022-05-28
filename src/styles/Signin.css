@@ -1,6 +1,6 @@
 .signin_container{
   display: flex;
-  height: 92vh;
+  height: 100vh;
 }
 
 .signin_banner{
@@ -40,6 +40,7 @@
 
 .signin h2{
   font-size: 2rem;
+  color: var(--secondary-font-color);
 }
 
 .signin_form{
