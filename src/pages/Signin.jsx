@@ -1,10 +1,10 @@
 import React, { useContext, useRef } from 'react'
 import '../styles/Signin.css'
-import bannerImage from '../assets/signin_invite.svg'
 import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../store/AppContext'
 import { createUser } from '../store/actions/auth.actions'
 import { validateUser } from '../services/validateSigin'
+import { Banner } from '../components/Banner'
 
 export const Signin = () => {
   
@@ -29,14 +29,9 @@ export const Signin = () => {
 
   return (
     <section className='signin_container'>
-      <section className='signin_banner'>
-          <h2>
-            The Little Store  
-          </h2>
-          <p>Where you can buy that what you've been dreaming of</p>
-
-          <img src={bannerImage} alt="Banner image" />
-      </section>
+      
+      <Banner />
+    
       <section className='signin'>
         <h2>Sign in</h2>
       <form className='signin_form' ref={formRef} onSubmit={handleSubmit}>

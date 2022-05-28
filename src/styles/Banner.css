@@ -1,0 +1,23 @@
+.signin_banner{
+  display: flex;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.signin_banner h2{
+  font-family: 'Secular One', sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.signin_banner p{
+  font-size: 1.5rem;  
+  font-style: italic;
+}
+
+.signin_banner img{
+  width: 90%;
+}
