@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { signout } from '../store/actions/auth.actions'
+import { AuthContext } from '../store/AppContext'
 import '../styles/Navbar.css'
 
 export const Navbar = () => {
+
+  const {dispatch} = useContext(AuthContext)
+
   return (
     <header className='header'>
 
@@ -13,7 +18,7 @@ export const Navbar = () => {
       <nav className='nav_container'>
         <Link to="/">Home</Link>
         <Link to="/checkout">Checkout</Link>
-        <Link to="/login">Sign out</Link>
+        <Link to="/login" onClick={()=>dispatch(signout())}>Sign out</Link>
       </nav>
     </header>
   )

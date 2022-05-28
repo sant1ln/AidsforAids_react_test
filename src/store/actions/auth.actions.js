@@ -9,3 +9,5 @@ export const login = (data) => ({
   type: types.login,
   payload: data
 })
+
+export const signout = () => ({type:types.logout})

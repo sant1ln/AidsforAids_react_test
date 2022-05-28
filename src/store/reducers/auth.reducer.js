@@ -33,6 +33,16 @@ export const authReducer = (state = {}, action) => {
         ]
       }
 
+      case types.logout:
+        return {
+          ...state,
+          activeUser: {
+            name: '',
+            email: '',
+            logged: false,
+          }
+        }
+
     default: return state;
   }
 }
