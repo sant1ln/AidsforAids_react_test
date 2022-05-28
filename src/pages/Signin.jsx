@@ -1,14 +1,16 @@
 import React, { useContext, useRef } from 'react'
 import '../styles/Signin.css'
 import bannerImage from '../assets/signin_invite.svg'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../store/AppContext'
 import { createUser } from '../store/actions/auth.actions'
+import { validateUser } from '../services/validateSigin'
 
 export const Signin = () => {
   
   const formRef = useRef();
   const {user,dispatch} = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -18,7 +20,11 @@ export const Signin = () => {
       email: formData.get('email'),
       password: formData.get('password')
     }
-    dispatch(createUser(data))
+    validateUser(user,data)
+      .then(()=>{
+        dispatch(createUser(data))
+        navigate('/')
+      })
   }
 
   return (

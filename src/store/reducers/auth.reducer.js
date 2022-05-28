@@ -22,6 +22,11 @@ export const authReducer = (state = {}, action) => {
     case types.signin:
       return {
         ...state,
+        activeUser: {
+          name: action.payload.name,
+          email: action.payload.email,
+          logged: true,
+        },
         users: [
           ...state.users,
           action.payload
