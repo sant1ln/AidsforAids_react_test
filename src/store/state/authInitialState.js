@@ -1,5 +1,12 @@
 export const authInitialState = {
-  name: '',
-  email: '',
-  logged: '',
+  activeUser: {
+    name: '',
+    email: '',
+    logged: false,
+  },
+  users: [{
+    email:"react@js.com",
+    name: "Santiago",
+    password: "let_it_be"
+  }]
 }

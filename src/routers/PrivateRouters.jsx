@@ -4,8 +4,8 @@ import { AuthContext } from '../store/AppContext'
 
 export const PrivateRouters = ({ children }) => {
   const { user } = useContext(AuthContext);
-
-  return user.logged
+  console.log(user.logged)
+  return user.activeUser.logged
         ? children
         : <Navigate to="/signin" />
 }
