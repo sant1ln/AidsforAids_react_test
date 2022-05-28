@@ -35,6 +35,7 @@
   justify-content: center;
   align-items: center;
   width: 50%;
+  background-color: var(--secondary-color);
 }
 
 .signin h2{
@@ -49,7 +50,7 @@
   width: 50%;
   height: auto;
   flex-direction: column;
-  border: 2px solid var(--tertiary-color);
+  background-color: var(--primary-color);
   border-radius: 5px;
 }
 

@@ -40,7 +40,7 @@ export const Signin = () => {
         </label>
 
         <button className='signin_submit'>Signin</button>
-        <Link className='invite'  to="/signin">Do you already have an account? log in here</Link>
+        <Link className='invite'  to="/login">Do you already have an account? log in here</Link>
       </form>
 
       </section>
