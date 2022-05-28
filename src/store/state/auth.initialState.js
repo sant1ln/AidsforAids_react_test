@@ -1,8 +1,8 @@
 export const authInitialState = {
   activeUser: {
-    name: '',
-    email: '',
-    logged: false,
+    name: 'Santiago',
+    email: 'react@js.com',
+    logged: true,
   },
   users: [{
     email:"react@js.com",

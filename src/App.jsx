@@ -3,7 +3,7 @@ import { AuthContext } from './store/AppContext';
 import { useReducer } from 'react';
 import { authReducer } from './store/reducers/auth.reducer';
 import { AppRouter } from './routers/AppRouter';
-import { authInitialState } from './store/state/authInitialState';
+import { authInitialState } from './store/state/auth.initialState';
 
 /* const init = () => {
    return {
