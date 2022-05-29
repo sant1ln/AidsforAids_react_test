@@ -1,0 +1,44 @@
+.book{
+  display: flex;
+  width: 30%;
+  height: 190px;
+  margin: 15px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+}
+
+
+
+.book_info{
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.book_info h3{
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.book_info hr{
+  border-color: var(--secondary-color);
+  width: 100%;
+}
+
+.book_info p{
+  font-size: 1rem;
+  margin: .2rem;
+}
+
+.book_info input{
+  width: 70%;
+  height: 25px;
+  align-self: center;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--secondary-font-color);
+  cursor: pointer;
+}

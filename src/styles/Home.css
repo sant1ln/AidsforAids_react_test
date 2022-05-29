@@ -1,0 +1,13 @@
+.books_container {  
+  display: flex;
+  justify-content: center;
+  height: auto;
+  padding: 30px;
+}
+
+.books_list{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 90%;
+}
