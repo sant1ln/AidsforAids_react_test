@@ -42,7 +42,7 @@ export const Login = () => {
 
         <label htmlFor="password" className='login_input'>
           <span>Password</span>
-          <input type="text" name="password" />
+          <input type="password" name="password" />
         </label>
 
         <button className='login_submit'>Login</button>

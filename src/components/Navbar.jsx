@@ -17,7 +17,6 @@ export const Navbar = () => {
 
       <nav className='nav_container'>
         <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
         <Link to="/login" onClick={()=>dispatch(signout())}>Sign out</Link>
       </nav>
     </header>

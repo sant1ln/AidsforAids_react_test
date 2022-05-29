@@ -8,7 +8,6 @@ export const validateUser = async (userSaved,formData) => {
     if(userExist.length > 0){
        let passwordIsOk = users.filter(user => user.password === formData.password)
         if(passwordIsOk.length > 0) {
-          console.log(true)
           resolve(true);
         }
     }
