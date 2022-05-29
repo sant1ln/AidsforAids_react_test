@@ -1,0 +1,16 @@
+.error_message{
+  width: 30%;
+  font-size: 1.2rem;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: var(--secondary-font-color);
+  background-color: var(--danger-color);
+}
+
+@media screen and (max-width: 425px){
+  .error_message{
+    width: 90%;
+  }
+}

@@ -5,5 +5,6 @@ export const validateUser = async (userSaved,formData) => {
     if(userExist.length === 0){
       resolve(true)
     }
+    reject('Usuario ya existe')
   })  
 }

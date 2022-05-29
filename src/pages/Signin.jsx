@@ -1,14 +1,16 @@
-import React, { useContext, useRef } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import '../styles/Signin.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../store/AppContext'
 import { createUser } from '../store/actions/auth.actions'
 import { validateUser } from '../services/validateSigin'
 import { Banner } from '../components/Banner'
+import { ErrorForm } from '../components/ErrorForm'
 
 export const Signin = () => {
   
   const formRef = useRef();
+  const [errorForm, setErrorForm] = useState({error:true,message:null})
   const {user,dispatch} = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -22,9 +24,11 @@ export const Signin = () => {
     }
     validateUser(user,data)
       .then(()=>{
+        setErrorForm({error:false,message:null})
         dispatch(createUser(data))
         navigate('/')
       })
+      .catch((errorMessage)=>setErrorForm({error:true,message:errorMessage}))
   }
 
   return (
@@ -54,6 +58,10 @@ export const Signin = () => {
         <button className='signin_submit'>Signin</button>
         <Link className='invite'  to="/login">Do you already have an account? log in here</Link>
       </form>
+
+      {
+        (errorForm.error) && <ErrorForm message='Usuario existente' />
+      }
 
       </section>
     </section>

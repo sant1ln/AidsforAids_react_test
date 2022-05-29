@@ -9,5 +9,6 @@ export const validateUser = async (userSaved,formData) => {
           resolve(true);
         }
     }
+    reject('Email or password are incorrent')
   })  
 }

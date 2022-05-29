@@ -1,12 +1,13 @@
-import React, { useContext, useRef } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { ErrorForm } from '../components/ErrorForm';
 import { validateUser } from '../services/validateLogin';
 import { login } from '../store/actions/auth.actions';
 import { AuthContext } from '../store/AppContext';
 import '../styles/Login.css'
 
 export const Login = () => {
-
+  const [errorForm, setErrorForm] = useState({error:false,message:null})
   const { user, dispatch } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -24,7 +25,7 @@ export const Login = () => {
         dispatch(login(data))
         navigate('/')
       })
-
+      .catch((error)=>setErrorForm({error:true,message:error}) )
   }
 
   return (
@@ -47,6 +48,9 @@ export const Login = () => {
         <button className='login_submit'>Login</button>
         <Link className='invite' to="/signin">don't have an account? sign up here</Link>
       </form>
+      {
+        (errorForm.error) && <ErrorForm message={errorForm.message} />
+      }
 
     </section>
   )
