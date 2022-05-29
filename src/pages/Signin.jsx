@@ -10,7 +10,7 @@ import { ErrorForm } from '../components/ErrorForm'
 export const Signin = () => {
   
   const formRef = useRef();
-  const [errorForm, setErrorForm] = useState({error:true,message:null})
+  const [errorForm, setErrorForm] = useState({error:false,message:null})
   const {user,dispatch} = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -60,7 +60,7 @@ export const Signin = () => {
       </form>
 
       {
-        (errorForm.error) && <ErrorForm message='Usuario existente' />
+        (errorForm.error) && <ErrorForm message={errorForm.message} />
       }
 
       </section>
