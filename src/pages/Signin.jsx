@@ -42,17 +42,17 @@ export const Signin = () => {
 
         <label htmlFor="name" className='signin_input'>
           <span>Name</span>
-          <input type="text" name="name" defaultValue="Santiago"/>
+          <input type="text" name="name"/>
         </label>
 
         <label htmlFor="email" className='signin_input'>
           <span>Email</span>
-          <input type="text" name="email" defaultValue="react@js.com" />
+          <input type="text" name="email"/>
         </label>
 
         <label htmlFor="password" className='signin_input'>
           <span>Password</span>
-          <input type="password" name="password" defaultValue="let_it_be" />
+          <input type="password" name="password"/>
         </label>
 
         <button className='signin_submit'>Signin</button>

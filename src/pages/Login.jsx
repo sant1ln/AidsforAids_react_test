@@ -37,12 +37,12 @@ export const Login = () => {
       <form className='login_form' ref={formRef} onSubmit={handleSubmit}>
         <label htmlFor="email" className='login_input'>
           <span>Email</span>
-          <input type="text" name="email" defaultValue="react@js.com" />
+          <input type="text" name="email" />
         </label>
 
         <label htmlFor="password" className='login_input'>
           <span>Password</span>
-          <input type="text" name="password" defaultValue="let_it_be" />
+          <input type="text" name="password" />
         </label>
 
         <button className='login_submit'>Login</button>
