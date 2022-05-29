@@ -11,3 +11,10 @@
   flex-wrap: wrap;
   width: 90%;
 }
+
+@media screen and (max-width: 425px){
+  .books_list{
+    flex-direction: column;
+    justify-content: center;
+  }
+}

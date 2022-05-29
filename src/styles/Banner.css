@@ -21,3 +21,11 @@
 .signin_banner img{
   width: 90%;
 }
+
+@media screen and (max-width: 425px){
+  
+  .signin_banner{
+    display: none;
+  }
+
+}

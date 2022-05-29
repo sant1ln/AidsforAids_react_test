@@ -76,4 +76,10 @@
 
 
 @media screen and (max-width: 425px){
+  .signin{
+    width: 100%;
+  }
+  .signin_form{
+    width: 90%;
+  }
 }
