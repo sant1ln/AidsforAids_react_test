@@ -14,9 +14,6 @@ export const Home = () => {
       .then((data) => dispatch(loadBooks(data)))
   }, [])
 
-  
-  console.log(books[7]?.industryIdentifiers[0].identifier)
-
   return (
     <main className="books_container">
       <section className='books_list'>

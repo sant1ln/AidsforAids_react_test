@@ -10,12 +10,15 @@ export const bookReducer = (state, action) => {
     case types.add_to_cart:
       return {
         ...state,
-        cart: action.payload,
+        cart: [
+          ...state.cart,
+          action.payload
+        ],
       };
-    case types.remove_to_cart:
+    case types.remove_from_cart:
       return {
         ...state,
-        cart: state.cart.filter( book => book.id !== action.payload)
+        cart: state.cart.filter( book => book.ISBN !== action.payload)
       };
     case types.reset_cart:
       return {

@@ -10,9 +10,9 @@ export const addToCart = (data) =>({
   payload: data
 })
 
-export const removeFromCart = (data) =>({
+export const removeFromCart = (ID) =>({
   type: types.remove_from_cart,
-  payload: data
+  payload: ID
 })
 
 export const resetCart = (data) =>({

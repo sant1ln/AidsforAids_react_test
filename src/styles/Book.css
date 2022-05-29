@@ -42,3 +42,9 @@
   color: var(--secondary-font-color);
   cursor: pointer;
 }
+
+.added{
+  background-color: var(--primary-color) !important;
+  border: 1px solid var(--secondary-color) !important;
+  color: var(--secondary-color) !important;
+}
