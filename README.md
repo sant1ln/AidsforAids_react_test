@@ -5,7 +5,8 @@
 - Descargar o clonar.
 - Entrar a la carpeta generada
 - Instalar dependencias "npm install"
-- Entrar al servidor de desarrollo.
+- Entrar al servidor de desarrollo con "npm run dev".
+- Entrar en un navegador a http://localhost:3000/
 
 ## Como usar.
 
